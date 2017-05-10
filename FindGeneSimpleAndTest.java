@@ -18,4 +18,21 @@ public class FindGeneSimpleAndTest
         
         return result;
     }
+    
+    public void testfindGeneSimple() {
+        String dna = "AATGCGTAATATGGT";
+        System.out.println("DNA strand is " + dna);
+        String gene = findGeneSimple(dna);
+        System.out.println("Gene is " + gene);
+        
+        dna = "AATGCTAGGGTAATATGGT";
+        System.out.println("DNA strand is " + dna);
+        gene = findGeneSimple(dna);
+        System.out.println("Gene is " + gene);
+        
+        dna = "ATCCTATGCTTCGGCTGCTCTAATATGGT";
+        System.out.println("DNA strand is " + dna);
+        gene = findGeneSimple(dna);
+        System.out.println("Gene is " + gene);
+    }
 }

@@ -3,4 +3,6 @@ comment0.target=FindGeneSimpleAndTest
 comment0.text=\n\ Write\ a\ description\ of\ class\ FindGeneSimpleAndTest\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=dna
 comment1.target=java.lang.String\ findGeneSimple(java.lang.String)
-numComments=2
+comment2.params=
+comment2.target=void\ testfindGeneSimple()
+numComments=3
