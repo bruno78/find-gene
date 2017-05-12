@@ -17,9 +17,24 @@ public class FindGeneSimpleAndTest
          if (startIndex == -1 || stopIndex == -1) {
             return "not found here";
         }
+        
         result = dna.substring(startIndex, stopIndex+3);
        
         return result;
+    }
+    
+    public String findGene(String dna) {
+        int startIndex = dna.indexOf("ATG");
+        int currIndex = dna.indexOf("TAA", startIndex + 3);
+        while(currIndex != -1) {
+            if((currIndex - startIndex) % 3 == 0) {
+                return dna.substring(startIndex, currIndex+3);
+            }
+            else {
+                currIndex = dna.indexOf("TAA", currIndex +1);
+            }
+        }
+        return "";
     }
     
     public void testfindGeneSimple() {
@@ -45,9 +60,26 @@ public class FindGeneSimpleAndTest
         System.out.println("Gene is " + gene);
         
         
-         dna = "TATGTATATCG";
+        dna = "TATGTATATCG";
         System.out.println("DNA strand is " + dna);
-        gene = findGeneSimple(dna);
+        gene = findGene(dna);
         System.out.println("Gene is " + gene);
+        
+        dna = "AATGCTAGGGTAATATGGT";
+        System.out.println("DNA strand is " + dna);
+        gene = findGene(dna);
+        System.out.println("Gene is " + gene);
+        
+        dna = "ATCCTATGCTTCGGCTGCTCTAATATGGT";
+        System.out.println("DNA strand is " + dna);
+        gene = findGene(dna);
+        System.out.println("Gene is " + gene);
+        
+        // No start gene case 
+        dna = "TTATAA";
+        System.out.println("DNA strand is " + dna);
+        gene = findGene(dna);
+        System.out.println("Gene is " + gene);
+        
     }
 }
