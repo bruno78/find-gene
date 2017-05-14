@@ -1,8 +1,12 @@
 #BlueJ class context
 comment0.target=FindGeneSimpleAndTest
 comment0.text=\n\ Write\ a\ description\ of\ class\ FindGeneSimpleAndTest\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=dna
-comment1.target=java.lang.String\ findGene(java.lang.String)
-comment2.params=
-comment2.target=void\ testfindGeneSimple()
-numComments=3
+comment1.params=dnaStr\ startIndex\ stopCodon
+comment1.target=int\ findStopCodon(java.lang.String,\ int,\ java.lang.String)
+comment2.params=dna
+comment2.target=java.lang.String\ findGene(java.lang.String)
+comment3.params=
+comment3.target=void\ testFindStop()
+comment4.params=
+comment4.target=void\ testfindGene()
+numComments=5
